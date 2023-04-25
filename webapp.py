@@ -14,7 +14,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html = True)
 
-st.title('Potato Leaf Disease Prediction')
+st.title('Maize Leaf Disease Prediction')
 
 def main() :
     file_uploaded = st.file_uploader('Choose an image...', type = 'jpg')
@@ -31,7 +31,7 @@ def main() :
 
 def predict_class(image) :
     with st.spinner('Loading Model...'):
-        classifier_model = keras.models.load_model(r'15epochs_maizeCNN.h5', compile = False)
+        classifier_model = keras.models.load_model(r'50epochs_maize.h5', compile = False)
 
     shape = ((256,256,3))
     model = keras.Sequential([hub.KerasLayer(classifier_model, input_shape = shape)])     # ye bhi kaam kar raha he
@@ -71,7 +71,7 @@ a:hover,  a:active {
 </style>
 
 <div class="footer">
-<p align="center"> <a href="https://www.linkedin.com/in/ronylpatil/">Developed with ❤ by ronil</a></p>
+<p align="center">Developed by Kaustubh DK, Shubham M and Himanshu B</p>
 </div>
         """
 
