@@ -27,7 +27,7 @@ def main() :
         st.pyplot(figure)
         result, confidence = predict_class(image)
         st.title('Prediction : {}'.format(result))
-        new_title = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">Confidence is:</p>' confidence
+        st.write('Confidence : {}'.format(confidence))
 
 def predict_class(image) :
     with st.spinner('Loading Model...'):
