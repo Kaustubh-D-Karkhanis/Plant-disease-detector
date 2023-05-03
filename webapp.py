@@ -45,6 +45,16 @@ def predict_class(image) :
     confidence = round(100 * (np.max(prediction[0])), 2)
     final_pred = class_name[np.argmax(prediction)]
     return final_pred, confidence
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 footer = """<style>
 a:link , a:visited{
